@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarkari Sathi — Latest Government Jobs, Results, Admit Cards & Schemes</title>
+  <style>
+    :root {
+      --primary: #0f3d7c;
+      --primary-dark: #092854;
+      --accent: #e66a00;
+      --accent-soft: #fff3e6;
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #162032;
+      --muted: #5b677a;
+      --border: #dde4ee;
+      --success: #0e7a47;
+      --success-soft: #e6f6ee;
+      --danger: #b42318;
+      --danger-soft: #fef3f2;
+      --info-soft: #eaf2ff;
+      --shadow: 0 4px 16px rgba(15, 61, 124, 0.08);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding-bottom: 48px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Top Utility Bar */
+    .topbar {
+      background: var(--primary-dark);
+      color: #dbeafe;
+      font-size: 12.5px;
+      padding: 6px 16px;
+    }
+
+    .topbar-inner {
+      max-width: 1220px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+    }
+
+    /* Main Header */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #ffffff;
+      padding: 20px 16px 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .header-inner {
+      max-width: 1220px;
+      margin: 0 auto;
+    }
+
+    .brand-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .brand h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+    }
+
+    .brand p {
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 8px;
+      padding: 9px 14px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.12s ease, opacity 0.15s ease, background 0.15s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-accent:hover {
+      background: #cf5f00;
+    }
+
+    .btn-light {
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-light:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      background: #f8fafc;
+    }
+
+    /* Search & Filter Bar */
+    .search-panel {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr auto;
+      gap: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+    }
+
+    .search-panel input,
+    .search-panel select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      color: var(--text);
+      background: #fff;
+    }
+
+    .search-panel input:focus,
+    .search-panel select:focus {
+      outline: 2px solid rgba(15, 61, 124, 0.22);
+      border-color: var(--primary);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1220px;
+      margin: 20px auto 0;
+      padding: 0 16px;
+    }
+
+    /* Category Pills */
+    .tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin-bottom: 18px;
+    }
+
+    .tab-btn {
+      background: #ffffff;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    /* Quick Qualification Chips */
+    .qual-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .qual-chip {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .qual-chip.active {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Layout Grid */
+    .grid-main {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .updates-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .results-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13.5px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    /* Card */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      border-color: #b8c7dd;
+      box-shadow: var(--shadow);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .badge {
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .badge-job {
+      background: var(--info-soft);
+      color: var(--primary);
+    }
+
+    .badge-admit {
+      background: var(--accent-soft);
+      color: #b54708;
+    }
+
+    .badge-result {
+      background: var(--success-soft);
+      color: var(--success);
+    }
+
+    .badge-scheme {
+      background: #f3e8ff;
+      color: #6b21a8;
+    }
+
+    .badge-urgent {
+      background: var(--danger-soft);
+      color: var(--danger);
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .card-org {
+      font-size: 13.5px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .save-btn {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .save-btn.saved {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background: #f8fafc;
+      border: 1px solid #e6edf5;
+      border-radius: 10px;
+      padding: 12px;
+      margin: 12px 0;
+    }
+
+    .summary-item label {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .summary-item span {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .card-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #eef2f6;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sidebar h2 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--primary-dark);
+    }
+
+    .form-group {
+      margin-bottom: 11px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13.5px;
+    }
+
+    .calc-result {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: var(--info-soft);
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .disclaimer-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      color: #78350f;
+      border-radius: var(--radius);
+      padding: 14px;
+      font-size: 12.5px;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.58);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 1000;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal {
+      background: #ffffff;
+      border-radius: 14px;
+      max-width: 740px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 22px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+
+    .modal-close {
+      background: #f1f5f9;
+      border: none;
+      border-radius: 8px;
+      width: 34px;
+      height: 34px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .detail-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      font-size: 13.5px;
+    }
+
+    .detail-table th,
+    .detail-table td {
+      border: 1px solid var(--border);
+      padding: 9px 11px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .detail-table th {
+      width: 32%;
+      background: #f8fafc;
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .links-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 36px 20px;
+      background: #ffffff;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      color: var(--muted);
+    }
+
+    @media (max-width: 920px) {
+      .grid-main {
+        grid-template-columns: 1fr;
+      }
+
+      .search-panel {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .search-panel input {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .brand h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span><strong>Sarkari Sathi</strong> — Central &amp; State Recruitment, Exam &amp; Welfare Scheme Tracker</span>
+      <span id="liveClock">Loading date &amp; time...</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand-row">
+        <div class="brand">
+          <div class="brand-badge">SS</div>
+          <div>
+            <h1>Sarkari Sathi</h1>
+            <p>Age limits, eligibility criteria, exam dates, results, government schemes &amp; official links in one place</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-light" id="btnShowSaved" type="button">Saved (<span id="savedCount">0</span>)</button>
+          <button class="btn btn-accent" id="btnOpenAdd" type="button">+ Add / Update Notification</button>
+        </div>
+      </div>
+
+      <form class="search-panel" id="filterForm">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search by exam, post, department, state, or scheme (e.g., SSC, Railway, Police, PM)..."
+        />
+        <select id="stateFilter" aria-label="Filter by State or Central">
+          <option value="ALL">All (Central &amp; States)</option>
+          <option value="Central Govt">Central Govt</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Maharashtra">Maharashtra</option>
+        </select>
+        <select id="qualFilter" aria-label="Filter by Qualification">
+          <option value="ALL">All Qualifications</option>
+          <option value="10th Pass">10th Pass</option>
+          <option value="12th Pass">12th Pass</option>
+          <option value="Graduate">Graduate</option>
+          <option value="ITI / Diploma">ITI / Diploma</option>
+          <option value="Scheme / Citizen">Scheme / Citizen</option>
+        </select>
+        <button class="btn btn-primary" type="submit">Filter</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tabs" role="tablist" aria-label="Update Categories">
+      <button class="tab-btn active" data-category="ALL" type="button">All Updates</button>
+      <button class="tab-btn" data-category="Latest Jobs" type="button">Latest Jobs</button>
+      <button class="tab-btn" data-category="Admit Card" type="button">Admit Card</button>
+      <button class="tab-btn" data-category="Result" type="button">Result</button>
+      <button class="tab-btn" data-category="Govt Schemes" type="button">Govt Schemes</button>
+    </div>
+
+    <div class="qual-strip">
+      <span>Quick Qualification Filter:</span>
+      <button class="qual-chip active" data-qual="ALL" type="button">All</button>
+      <button class="qual-chip" data-qual="10th Pass" type="button">10th Pass</button>
+      <button class="qual-chip" data-qual="12th Pass" type="button">12th Pass</button>
+      <button class="qual-chip" data-qual="Graduate" type="button">Graduate</button>
+      <button class="qual-chip" data-qual="ITI / Diploma" type="button">ITI / Diploma</button>
+      <button class="qual-chip" data-qual="Scheme / Citizen" type="button">Schemes</button>
+    </div>
+
+    <div class="grid-main">
+      <section>
+        <div class="results-meta">
+          <span id="resultsCount">Showing updates</span>
+          <button
+            type="button"
+            id="resetFiltersBtn"
+            style="background:none;border:none;color:var(--primary);font-weight:600;cursor:pointer;"
+          >
+            Reset Filters
+          </button>
+        </div>
+        <div class="updates-list" id="updatesContainer"></div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h2>Age Limit Checker</h2>
+          <div class="form-group">
+            <label for="dobInput">Your Date of Birth</label>
+            <input type="date" id="dobInput" />
+          </div>
+          <div class="form-group">
+            <label for="cutoffInput">Cutoff / Reference Date</label>
+            <input type="date" id="cutoffInput" value="2026-01-01" />
+          </div>
+          <div class="form-group">
+            <label for="postAgeSelect">Check Against a Notification</label>
+            <select id="postAgeSelect"></select>
+          </div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center;" id="calcAgeBtn" type="button">
+            Calculate Age &amp; Eligibility
+          </button>
+          <div class="calc-result" id="ageResultBox">
+            Enter your Date of Birth and click Calculate to check your exact age and eligibility.
+          </div>
+        </div>
+
+        <div class="disclaimer-box">
+          <strong>Important Notice:</strong> Sarkari Sathi is an informational aggregator designed to organize age limits, eligibility rules, dates, and official links clearly. Always verify final notifications, fee rules, and application portals on the official government website before applying.
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Detail Modal -->
+  <div class="modal-backdrop" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <div class="badges" id="modalBadges"></div>
+          <h2 id="modalTitle" style="font-size:20px;font-weight:800;color:var(--text);"></h2>
+          <p id="modalOrg" style="font-size:13.5px;color:var(--muted);"></p>
+        </div>
+        <button class="modal-close" id="closeDetailModal" aria-label="Close modal">&times;</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Add Notification Modal -->
+  <div class="modal-backdrop" id="addModal" role="dialog" aria-modal="true" aria-labelledby="addModalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <h2 id="addModalTitle" style="font-size:19px;font-weight:800;">Add New Job / Exam / Scheme Update</h2>
+          <p style="font-size:13px;color:var(--muted);">Saved locally in your browser so you can test and publish new items quickly.</p>
+        </div>
+        <button class="modal-close" id="closeAddModal" aria-label="Close modal">&times;</button>
+      </div>
+      <form id="addUpdateForm">
+        <div class="form-group">
+          <label for="newTitle">Title / Post / Scheme Name *</label>
+          <input type="text" id="newTitle" required placeholder="e.g., SSC CHSL 10+2 Recruitment" />
+        </div>
+        <div class="form-group">
+          <label for="newOrg">Department / Conducting Body *</label>
+          <input type="text" id="newOrg" required placeholder="e.g., Staff Selection Commission (SSC)" />
+        </div>
+        <div class="form-group">
+          <label for="newCategory">Category *</label>
+          <select id="newCategory">
+            <option value="Latest Jobs">Latest Jobs</option>
+            <option value="Admit Card">Admit Card</option>
+            <option value="Result">Result</option>
+            <option value="Govt Schemes">Govt Schemes</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="newState">Jurisdiction / State *</label>
+          <input type="text" id="newState" required value="Central Govt" />
+        </div>
+        <div class="form-group">
+          <label for="newQual">Qualification Category *</label>
+          <select id="newQual">
+            <option value="10th Pass">10th Pass</option>
+            <option value="12th Pass">12th Pass</option>
+            <option value="Graduate">Graduate</option>
+            <option value="ITI / Diploma">ITI / Diploma</option>
+            <option value="Scheme / Citizen">Scheme / Citizen</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="newQualDetail">Detailed Qualification Required *</label>
+          <input type="text" id="newQualDetail" required placeholder="e.g., 12th Pass from a recognized board" />
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div class="form-group">
+            <label for="newMinAge">Minimum Age (Years)</label>
+            <input type="number" id="newMinAge" value="18" min="0" max="100" />
+          </div>
+          <div class="form-group">
+            <label for="newMaxAge">Maximum Age (Years)</label>
+            <input type="number" id="newMaxAge" value="27" min="0" max="100" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="newAgeText">Age Limit &amp; Relaxation Notes *</label>
+          <input type="text" id="newAgeText" required placeholder="e.g., 18–27 years; relaxation as per govt rules (OBC +3 yrs, SC/ST +5 yrs)" />
+        </div>
+        <div class="form-group">
+          <label for="newLastDate">Important Dates / Last Date *</label>
+          <input type="text" id="newLastDate" required placeholder="e.g., Apply before 15 Dec 2026" />
+        </div>
+        <div class="form-group">
+          <label for="newFee">Application Fee / Benefit</label>
+          <input type="text" id="newFee" placeholder="e.g., Gen/OBC ₹100; SC/ST/Women/PwBD Exempt" />
+        </div>
+        <div class="form-group">
+          <label for="newSelection">Selection / Benefit Process</label>
+          <input type="text" id="newSelection" placeholder="e.g., Tier-I CBE, Tier-II, Document Verification" />
+        </div>
+        <div class="form-group">
+          <label for="newApplyUrl">Official Portal / Apply URL *</label>
+          <input type="url" id="newApplyUrl" required value="https://www.india.gov.in/" />
+        </div>
+        <div class="form-group">
+          <label for="newNotifUrl">Official Notification / Info URL *</label>
+          <input type="url" id="newNotifUrl" required value="https://www.india.gov.in/" />
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center;">
+          Save to Sarkari Sathi
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const DEFAULT_UPDATES = [
+      {
+        id: "ssc-cgl-rec",
+        title: "Combined Graduate Level (CGL) Examination",
+        org: "Staff Selection Commission (SSC)",
+        category: "Latest Jobs",
+        state: "Central Govt",
+        qualification: "Graduate",
+        qualificationDetail: "Bachelor's Degree in any discipline from a recognized university (specific posts require Statistics, Economics, or Commerce).",
+        minAge: 18,
+        maxAge: 32,
+        ageLimitText: "18–27 yrs / 18–30 yrs / 20–30 yrs / 18–32 yrs depending on post; age relaxation applicable for SC/ST/OBC/PwBD/Ex-Servicemen.",
+        vacancies: "Check Official Notification",
+        lastDate: "As per latest SSC calendar",
+        fee: "Gen/OBC/EWS: ₹100 | Women/SC/ST/PwBD/ESM: Exempted",
+        selectionProcess: "Tier-I (Computer Based Exam) -> Tier-II -> Document Verification",
+        urgent: true,
+        postedOn: "Updated Recently",
+        applyUrl: "https://ssc.gov.in/",
+        notificationUrl: "https://ssc.gov.in/"
+      },
+      {
+        id: "rrb-ntpc-rec",
+        title: "Non-Technical Popular Categories (NTPC) Recruitment",
+        org: "Railway Recruitment Boards (RRB)",
+        category: "Latest Jobs",
+        state: "Central Govt",
+        qualification: "12th Pass",
+        qualificationDetail: "12th (10+2) for Undergraduate posts; Bachelor's Degree for Graduate posts from a recognized institution.",
+        minAge: 18,
+        maxAge: 33,
+        ageLimitText: "18–30 yrs (UG posts) and 18–33 yrs (Graduate posts) as on cutoff date; relaxation per Railway rules.",
+        vacancies: "Check CEN Notification",
+        lastDate: "Check active RRB window",
+        fee: "Gen/OBC: ₹500 (₹400 refunded after CBT-1) | SC/ST/EBC/Female/Minority/PwBD: ₹250 (refunded after CBT-1)",
+        selectionProcess: "CBT-1 -> CBT-2 -> Typing Skill Test / CBAT (as applicable) -> Medical & DV",
+        urgent: true,
+        postedOn: "Updated Recently",
+        applyUrl: "https://www.rrbapply.gov.in/",
+        notificationUrl: "https://indianrailways.gov.in/"
+      },
+      {
+        id: "upsc-cse-rec",
+        title: "Civil Services Examination (CSE — IAS / IPS / IFS)",
+        org: "Union Public Service Commission (UPSC)",
+        category: "Latest Jobs",
+        state: "Central Govt",
+        qualification: "Graduate",
+        qualificationDetail: "Hold a degree from any university incorporated by an Act of Central/State Legislature or equivalent recognized qualification.",
+        minAge: 21,
+        maxAge: 32,
+        ageLimitText: "21–32 years for General/EWS (upper age relaxation for OBC +3 yrs, SC/ST +5 yrs, PwBD +10 yrs as per UPSC rules).",
+        vacancies: "As notified in CSE Notice",
+        lastDate: "Annual UPSC Notification Cycle",
+        fee: "General/OBC (Male): ₹100 | Female/SC/ST/PwBD: Exempted",
+        selectionProcess: "Preliminary Exam (Objective) -> Main Exam (Written) -> Personality Test (Interview)",
+        urgent: false,
+        postedOn: "Updated Recently",
+        applyUrl: "https://upsconline.nic.in/",
+        notificationUrl: "https://upsc.gov.in/"
+      },
+      {
+        id: "state-police-constable",
+        title: "State Police Constable Direct Recruitment",
+        org: "State Police Recruitment & Promotion Board",
+        category: "Latest Jobs",
+        state: "Uttar Pradesh",
+        qualification: "12th Pass",
+        qualificationDetail: "10+2 (Intermediate) passed from a recognized board; preference/additional criteria as per state rules.",
+        minAge: 18,
+        maxAge: 25,
+        ageLimitText: "Male: 18–25 yrs, Female: 18–28 yrs (or as specified in state advertisement); category relaxation applicable.",
+        vacancies: "Check State Board Notice",
+        lastDate: "Check current recruitment notice",
+        fee: "As per state recruitment notification",
+        selectionProcess: "Written Examination -> Physical Standard Test (PST) -> Physical Efficiency Test (PET) -> Medical & DV",
+        urgent: true,
+        postedOn: "Updated Recently",
+        applyUrl: "https://www.india.gov.in/",
+        notificationUrl: "https://www.india.gov.in/"
+      },
+      {
+        id: "apprenticeship-iti-diploma",
+        title: "National Apprenticeship & Technical Trade Openings",
+        org: "Ministry of Skill Development & Entrepreneurship (NAPS)",
+        category: "Latest Jobs",
+        state: "Central Govt",
+        qualification: "ITI / Diploma",
+        qualificationDetail: "NCVT/SCVT ITI Certificate or Polytechnic Diploma / Degree in relevant engineering/non-engineering trade.",
+        minAge: 14,
+        maxAge: 35,
+        ageLimitText: "Minimum 14 years (18 years for hazardous trades); upper age limit varies by establishment/PSU.",
+        vacancies: "Rolling Establishments",
+        lastDate: "Open on NAPS Portal",
+        fee: "No application fee on NAPS",
+        selectionProcess: "Profile Verification -> Trade/Interview Selection by Establishment -> Apprenticeship Contract",
+        urgent: false,
+        postedOn: "Updated Recently",
+        applyUrl: "https://www.apprenticeshipindia.gov.in/",
+        notificationUrl: "https://www.apprenticeshipindia.gov.in/"
+      },
+      {
+        id: "admit-card-hub",
+        title: "Examination Admit Card & City Intimation Slip Tracker",
+        org: "SSC / RRB / NTA / State Exam Boards",
+        category: "Admit Card",
+        state: "Central Govt",
+        qualification: "10th Pass",
+        qualificationDetail: "Registered candidates with valid Registration/Application Number and Date of Birth or Password.",
+        minAge: 18,
+        maxAge: 40,
+        ageLimitText: "Depends on underlying recruitment notification.",
+        vacancies: "Exam Hall Pass",
+        lastDate: "Download prior to exam shift",
+        fee: "Free download with candidate credentials",
+        selectionProcess: "Check Exam City Slip -> Download Admit Card -> Carry Photo ID & Printout to Centre",
+        urgent: true,
+        postedOn: "Live Tracker",
+        applyUrl: "https://www.india.gov.in/",
+        notificationUrl: "https://www.india.gov.in/"
+      },
+      {
+        id: "result-scorecard-hub",
+        title: "Recruitment Results, Cut-Offs & Merit Lists",
+        org: "Central & State Recruitment Commissions",
+        category: "Result",
+        state: "Central Govt",
+        qualification: "Graduate",
+        qualificationDetail: "Candidates who appeared in Written Exam / CBT / Skill Test / Interview stages.",
+        minAge: 18,
+        maxAge: 45,
+        ageLimitText: "As applicable to respective examination.",
+        vacancies: "Merit & Scorecard Release",
+        lastDate: "Check latest PDF / Roll No. list",
+        fee: "Free result & scorecard check",
+        selectionProcess: "Stage-wise Merit Shortlisting -> Document Verification -> Final Appointment",
+        urgent: false,
+        postedOn: "Live Tracker",
+        applyUrl: "https://www.india.gov.in/",
+        notificationUrl: "https://www.india.gov.in/"
+      },
+      {
+        id: "pm-kisan-scheme",
+        title: "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+        org: "Ministry of Agriculture & Farmers Welfare",
+        category: "Govt Schemes",
+        state: "Central Govt",
+        qualification: "Scheme / Citizen",
+        qualificationDetail: "Landholding farmer families with cultivable land registered in state land records (subject to statutory exclusions).",
+        minAge: 18,
+        maxAge: 100,
+        ageLimitText: "Adult landholding farmer families; check exclusion criteria on official PM-KISAN portal.",
+        vacancies: "₹6,000/year in 3 installments",
+        lastDate: "e-KYC & Aadhaar-seeded bank account required",
+        fee: "No fee; direct benefit transfer (DBT)",
+        selectionProcess: "Farmer Registration -> Land Record & e-KYC Verification -> DBT Installment Credit",
+        urgent: false,
+        postedOn: "Central Welfare Scheme",
+        applyUrl: "https://pmkisan.gov.in/",
+        notificationUrl: "https://pmkisan.gov.in/"
+      },
+      {
+        id: "ayushman-bharat-scheme",
+        title: "Ayushman Bharat PM-JAY Health Coverage",
+        org: "National Health Authority (NHA)",
+        category: "Govt Schemes",
+        state: "Central Govt",
+        qualification: "Scheme / Citizen",
+        qualificationDetail: "Eligible households identified under socio-economic/deprivation criteria and approved state categories.",
+        minAge: 0,
+        maxAge: 100,
+        ageLimitText: "All eligible family members irrespective of age (including senior citizen provisions as notified).",
+        vacancies: "Up to ₹5 Lakh/year health cover",
+        lastDate: "Continuous enrollment via Ayushman App / CSC",
+        fee: "Free Ayushman Card generation at authorized centers",
+        selectionProcess: "Eligibility Check -> Aadhaar e-KYC -> Ayushman Card Download -> Empanelled Hospital Treatment",
+        urgent: false,
+        postedOn: "Central Welfare Scheme",
+        applyUrl: "https://pmjay.gov.in/",
+        notificationUrl: "https://nha.gov.in/"
+      }
+    ];
+
+    const STORAGE_KEY_CUSTOM = "sarkari_sathi_custom_updates_v1";
+    const STORAGE_KEY_SAVED = "sarkari_sathi_saved_ids_v1";
+
+    function loadCustomUpdates() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY_CUSTOM)) || [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveCustomUpdates(list) {
+      localStorage.setItem(STORAGE_KEY_CUSTOM, JSON.stringify(list));
+    }
+
+    function loadSavedIds() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY_SAVED)) || [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveSavedIds(ids) {
+      localStorage.setItem(STORAGE_KEY_SAVED, JSON.stringify(ids));
+    }
+
+    let customUpdates = loadCustomUpdates();
+    let savedIds = new Set(loadSavedIds());
+    let currentCategory = "ALL";
+    let currentQual = "ALL";
+    let onlySaved = false;
+
+    function getAllUpdates() {
+      return [...customUpdates, ...DEFAULT_UPDATES];
+    }
+
+    function getCategoryBadgeClass(cat) {
+      if (cat === "Latest Jobs") return "badge-job";
+      if (cat === "Admit Card") return "badge-admit";
+      if (cat === "Result") return "badge-result";
+      return "badge-scheme";
+    }
+
+    function escapeHtml(str = "") {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function renderUpdates() {
+      const searchText = document.getElementById("searchInput").value.trim().toLowerCase();
+      const stateVal = document.getElementById("stateFilter").value;
+      const qualSelectVal = document.getElementById("qualFilter").value;
+      const activeQual = currentQual !== "ALL" ? currentQual : qualSelectVal;
+
+      const all = getAllUpdates();
+      const filtered = all.filter((item) => {
+        if (onlySaved && !savedIds.has(item.id)) return false;
+        if (currentCategory !== "ALL" && item.category !== currentCategory) return false;
+        if (stateVal !== "ALL" && item.state !== stateVal) return false;
+        if (activeQual !== "ALL" && item.qualification !== activeQual) return false;
+
+        if (searchText) {
+          const hay = [
+            item.title,
+            item.org,
+            item.category,
+            item.state,
+            item.qualification,
+            item.qualificationDetail,
+            item.ageLimitText
+          ]
+            .join(" ")
+            .toLowerCase();
+          if (!hay.includes(searchText)) return false;
+        }
+        return true;
+      });
+
+      const container = document.getElementById("updatesContainer");
+      const metaCount = document.getElementById("resultsCount");
+      document.getElementById("savedCount").textContent = savedIds.size;
+
+      metaCount.textContent = `Showing ${filtered.length} of ${all.length} updates${onlySaved ? " (Saved)" : ""}`;
+
+      if (!filtered.length) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <p style="font-weight:700;color:var(--text);margin-bottom:6px;">No matching updates found</p>
+            <p style="font-size:13.5px;margin-bottom:12px;">Try clearing your search keyword or resetting filters.</p>
+            <button class="btn btn-outline" type="button" onclick="resetAllFilters()">Reset All Filters</button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered
+        .map((item) => {
+          const isSaved = savedIds.has(item.id);
+          return `
+            <article class="card">
+              <div class="card-top">
+                <div>
+                  <div class="badges">
+                    <span class="badge ${getCategoryBadgeClass(item.category)}">${escapeHtml(item.category)}</span>
+                    <span class="badge badge-job">${escapeHtml(item.state)}</span>
+                    ${item.urgent ? `<span class="badge badge-urgent">Action / Active</span>` : ""}
+                  </div>
+                  <h3 class="card-title">${escapeHtml(item.title)}</h3>
+                  <div class="card-org">${escapeHtml(item.org)}</div>
+                </div>
+                <button
+                  type="button"
+                  class="save-btn ${isSaved ? "saved" : ""}"
+                  onclick="toggleSave('${escapeHtml(item.id)}')"
+                >
+                  ${isSaved ? "Saved" : "Save"}
+                </button>
+              </div>
+
+              <div class="summary-grid">
+                <div class="summary-item">
+                  <label>Age Limit</label>
+                  <span>${escapeHtml(item.minAge)}–${escapeHtml(item.maxAge)} Yrs</span>
+                </div>
+                <div class="summary-item">
+                  <label>Qualification</label>
+                  <span>${escapeHtml(item.qualification)}</span>
+                </div>
+                <div class="summary-item">
+                  <label>Key Date / Status</label>
+                  <span>${escapeHtml(item.lastDate)}</span>
+                </div>
+              </div>
+
+              <p style="font-size:13.5px;color:var(--text);margin-bottom:8px;">
+                <strong>Eligibility:</strong> ${escapeHtml(item.qualificationDetail)}
+              </p>
+              <p style="font-size:13px;color:var(--muted);">
+                <strong>Age Rules:</strong> ${escapeHtml(item.ageLimitText)}
+              </p>
+
+              <div class="card-footer">
+                <span>${escapeHtml(item.postedOn)}</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline" type="button" onclick="openDetail('${escapeHtml(item.id)}')">
+                    Full Details
+                  </button>
+                  <a class="btn btn-primary" href="${escapeHtml(item.applyUrl)}" target="_blank" rel="noopener noreferrer">
+                    Official Link
+                  </a>
+                </div>
+              </div>
+            </article>
+          `;
+        })
+        .join("");
+    }
+
+    function populateAgeSelect() {
+      const select = document.getElementById("postAgeSelect");
+      const all = getAllUpdates();
+      select.innerHTML = all
+        .map(
+          (u) =>
+            `<option value="${escapeHtml(u.id)}">${escapeHtml(u.title)} (${u.minAge}–${u.maxAge} yrs)</option>`
+        )
+        .join("");
+    }
+
+    function toggleSave(id) {
+      if (savedIds.has(id)) {
+        savedIds.delete(id);
+      } else {
+        savedIds.add(id);
+      }
+      saveSavedIds([...savedIds]);
+      renderUpdates();
+    }
+
+    function openDetail(id) {
+      const item = getAllUpdates().find((u) => u.id === id);
+      if (!item) return;
+
+      document.getElementById("modalBadges").innerHTML = `
+        <span class="badge ${getCategoryBadgeClass(item.category)}">${escapeHtml(item.category)}</span>
+        <span class="badge badge-job">${escapeHtml(item.state)}</span>
+      `;
+      document.getElementById("modalTitle").textContent = item.title;
+      document.getElementById("modalOrg").textContent = item.org;
+
+      document.getElementById("modalBody").innerHTML = `
+        <table class="detail-table">
+          <tr>
+            <th>Qualification Required</th>
+            <td><strong>${escapeHtml(item.qualification)}</strong> — ${escapeHtml(item.qualificationDetail)}</td>
+          </tr>
+          <tr>
+            <th>Age Limit &amp; Relaxation</th>
+            <td>${escapeHtml(item.ageLimitText)}</td>
+          </tr>
+          <tr>
+            <th>Vacancy / Benefit</th>
+            <td>${escapeHtml(item.vacancies)}</td>
+          </tr>
+          <tr>
+            <th>Important Dates</th>
+            <td>${escapeHtml(item.lastDate)}</td>
+          </tr>
+          <tr>
+            <th>Application Fee / Cost</th>
+            <td>${escapeHtml(item.fee)}</td>
+          </tr>
+          <tr>
+            <th>Selection / Process</th>
+            <td>${escapeHtml(item.selectionProcess)}</td>
+          </tr>
+        </table>
+        <div class="links-box">
+          <a class="btn btn-primary" href="${escapeHtml(item.applyUrl)}" target="_blank" rel="noopener noreferrer">
+            Open Official Portal
+          </a>
+          <a class="btn btn-outline" href="${escapeHtml(item.notificationUrl)}" target="_blank" rel="noopener noreferrer">
+            Official Notification / Info
+          </a>
+        </div>
+      `;
+
+      document.getElementById("detailModal").classList.add("open");
+    }
+
+    function resetAllFilters() {
+      onlySaved = false;
+      currentCategory = "ALL";
+      currentQual = "ALL";
+      document.getElementById("searchInput").value = "";
+      document.getElementById("stateFilter").value = "ALL";
+      document.getElementById("qualFilter").value = "ALL";
+      document.querySelectorAll(".tab-btn").forEach((b) => b.classList.toggle("active", b.dataset.category === "ALL"));
+      document.querySelectorAll(".qual-chip").forEach((c) => c.classList.toggle("active", c.dataset.qual === "ALL"));
+      renderUpdates();
+    }
+
+    // Event Listeners
+    document.getElementById("filterForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      currentQual = document.getElementById("qualFilter").value;
+      document.querySelectorAll(".qual-chip").forEach((c) => c.classList.toggle("active", c.dataset.qual === currentQual));
+      renderUpdates();
+    });
+
+    document.getElementById("searchInput").addEventListener("input", renderUpdates);
+    document.getElementById("stateFilter").addEventListener("change", renderUpdates);
+    document.getElementById("qualFilter").addEventListener("change", (e) => {
+      currentQual = e.target.value;
+      document.querySelectorAll(".qual-chip").forEach((c) => c.classList.toggle("active", c.dataset.qual === currentQual));
+      renderUpdates();
+    });
+
+    document.querySelectorAll(".tab-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        onlySaved = false;
+        currentCategory = btn.dataset.category;
+        document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderUpdates();
+      });
+    });
+
+    document.querySelectorAll(".qual-chip").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        currentQual = chip.dataset.qual;
+        document.getElementById("qualFilter").value = currentQual;
+        document.querySelectorAll(".qual-chip").forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+        renderUpdates();
+      });
+    });
+
+    document.getElementById("resetFiltersBtn").addEventListener("click", resetAllFilters);
+
+    document.getElementById("btnShowSaved").addEventListener("click", () => {
+      onlySaved = !onlySaved;
+      renderUpdates();
+    });
+
+    document.getElementById("closeDetailModal").addEventListener("click", () => {
+      document.getElementById("detailModal").classList.remove("open");
+    });
+
+    document.getElementById("detailModal").addEventListener("click", (e) => {
+      if (e.target.id === "detailModal") {
+        e.currentTarget.classList.remove("open");
+      }
+    });
+
+    document.getElementById("btnOpenAdd").addEventListener("click", () => {
+      document.getElementById("addModal").classList.add("open");
+    });
+
+    document.getElementById("closeAddModal").addEventListener("click", () => {
+      document.getElementById("addModal").classList.remove("open");
+    });
+
+    document.getElementById("addModal").addEventListener("click", (e) => {
+      if (e.target.id === "addModal") {
+        e.currentTarget.classList.remove("open");
+      }
+    });
+
+    document.getElementById("addUpdateForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const newItem = {
+        id: "custom-" + Date.now(),
+        title: document.getElementById("newTitle").value.trim(),
+        org: document.getElementById("newOrg").value.trim(),
+        category: document.getElementById("newCategory").value,
+        state: document.getElementById("newState").value.trim() || "Central Govt",
+        qualification: document.getElementById("newQual").value,
+        qualificationDetail: document.getElementById("newQualDetail").value.trim(),
+        minAge: Number(document.getElementById("newMinAge").value) || 0,
+        maxAge: Number(document.getElementById("newMaxAge").value) || 60,
+        ageLimitText: document.getElementById("newAgeText").value.trim(),
+        vacancies: "As per notification",
+        lastDate: document.getElementById("newLastDate").value.trim(),
+        fee: document.getElementById("newFee").value.trim() || "As per notification",
+        selectionProcess: document.getElementById("newSelection").value.trim() || "As per notification",
+        urgent: true,
+        postedOn: "Added by You",
+        applyUrl: document.getElementById("newApplyUrl").value.trim(),
+        notificationUrl: document.getElementById("newNotifUrl").value.trim()
+      };
+
+      customUpdates.unshift(newItem);
+      saveCustomUpdates(customUpdates);
+      populateAgeSelect();
+      renderUpdates();
+      e.target.reset();
+      document.getElementById("addModal").classList.remove("open");
+    });
+
+    document.getElementById("calcAgeBtn").addEventListener("click", () => {
+      const dobVal = document.getElementById("dobInput").value;
+      const cutoffVal = document.getElementById("cutoffInput").value;
+      const selectedId = document.getElementById("postAgeSelect").value;
+      const resultBox = document.getElementById("ageResultBox");
+
+      if (!dobVal || !cutoffVal) {
+        resultBox.textContent = "Please select both your Date of Birth and the Cutoff Date.";
+        return;
+      }
+
+      const dob = new Date(dobVal + "T00:00:00");
+      const cutoff = new Date(cutoffVal + "T00:00:00");
+
+      if (dob > cutoff) {
+        resultBox.textContent = "Date of Birth is after the selected Cutoff Date.";
+        return;
+      }
+
+      let years = cutoff.getFullYear() - dob.getFullYear();
+      let months = cutoff.getMonth() - dob.getMonth();
+      let days = cutoff.getDate() - dob.getDate();
+
+      if (days < 0) {
+        months -= 1;
+        const prevMonthDays = new Date(cutoff.getFullYear(), cutoff.getMonth(), 0).getDate();
+        days += prevMonthDays;
+      }
+      if (months < 0) {
+        years -= 1;
+        months += 12;
+      }
+
+      const post = getAllUpdates().find((u) => u.id === selectedId);
+      let statusMsg = "";
+      if (post) {
+        if (years >= post.minAge && years <= post.maxAge) {
+          statusMsg = ` — Within base age range (${post.minAge}–${post.maxAge} yrs) for ${post.title}.`;
+        } else {
+          statusMsg = ` — Outside base age range (${post.minAge}–${post.maxAge} yrs) without category relaxation.`;
+        }
+      }
+
+      resultBox.textContent = `Age on cutoff date: ${years} Years, ${months} Months, ${days} Days${statusMsg}`;
+    });
+
+    function updateClock() {
+      const now = new Date();
+      document.getElementById("liveClock").textContent = now.toLocaleString("en-IN", {
+        dateStyle: "medium",
+        timeStyle: "short"
+      });
+    }
+
+    updateClock();
+    setInterval(updateClock, 30000);
+    populateAgeSelect();
+    renderUpdates();
+  </script>
+</body>
+</html>
